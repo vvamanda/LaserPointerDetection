@@ -42,6 +42,30 @@ This project is designed to receive a video stream from an RTSP camera, detect a
    ```
 3. Press `q` to exit the video display.
 
+## Effect Demonstration
+
+To demonstrate the effectiveness of the laser pointer detection system, you can use your local camera and substitute a laser pointer with your phone's flashlight.
+
+If you want to use your local camera instead, modify the `receive()` function as follows:
+
+   ```python
+   def receive():
+       print("Starting to receive video stream from local camera")
+       cap = cv2.VideoCapture(0)  # 0 for the default local camera
+       while True:
+           ret, frame = cap.read()
+           if ret:
+               q.put(frame)
+           else:
+               print("Failed to grab frame")
+               break
+       cap.release()
+   ```
+
+
+Here is an example of the laser pointer detection in action:
+
+![LaserPointerDetectionExample](example.png)
 
 
 ## Code Explanation
