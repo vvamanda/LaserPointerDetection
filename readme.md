@@ -66,7 +66,7 @@ If you want to use your local camera instead, modify the `receive()` function as
 Here is an example of the laser pointer detection in action:
 
 ![LaserPointerDetectionExample](example.png)
-
+![LaserPointerDetectionExample2](example2.png)
 
 ## Code Explanation
 
